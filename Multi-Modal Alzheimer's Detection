@@ -1,0 +1,25 @@
+# 🧠 BrainFusion: Multi-Modal Alzheimer's Detection
+
+### 🚀 Overview
+**BrainFusion** is a Hybrid Deep Learning project designed to detect Alzheimer's Disease stages by combining **Computer Vision** with **Clinical Metadata**. 
+
+Most traditional models rely solely on MRI scans. This project implements a **Dual-Input Neural Network** that fuses spatial features from MRI images (CNN branch) with patient clinical stats like MMSE and Age (MLP branch) to achieve a more holistic diagnosis.
+
+### 📊 Key Results
+* **Accuracy:** 84% 
+* **F1-Score (Healthy):** 0.93
+* **Early Stage Recall:** 0.80 (Mild Demented)
+
+### 🛠 Tech Stack
+* **Framework:** TensorFlow / Keras 3
+* **Architecture:** Hybrid CNN + MLP (Multi-Input)
+* **Processing:** OpenCV, Scikit-Learn, Pandas
+* **Visualization:** Matplotlib, Seaborn
+
+### 📖 How it Works
+1. **CNN Branch:** Extracts structural atrophy patterns from $128 \times 128$ MRI slices.
+2. **Tabular Branch:** Normalizes clinical metrics (Age, MMSE, Brain Volume) for context.
+3. **Fusion:** Concatenates both feature vectors into a final classification head.
+
+---
+*Developed as an end-to-end medical AI solution for the OASIS dataset.*
